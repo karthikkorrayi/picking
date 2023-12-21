@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>proposal</title>
+  </head>
+  <style type="text/css">
+    body {
+      background: url("https://cdn4.vectorstock.com/i/1000x1000/73/18/stylish-hearts-bubble-romantic-love-background-vector-28947318.jpg")
+        no-repeat fixed;
+      background-size: cover;
+      box-sizing: border-box;
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    h2 {
+      font-size: 60px;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      width: 100%;
+      overflow: clip;
+    }
+    .yesclass,
+    .noclass {
+      height: 60px;
+      width: 100px;
+      border: 1px solid black;
+      border-radius: 30px;
+      font-size: 30px;
+    }
+  </style>
+  <body>
+    <h2>Problems comes and go, but world is still fine.. there is no one like you all, so.. <strong>will you be mine?</strong></h2>
+    <div class="btn">
+      <button type="button" class="yesclass" onclick="clkfunc()">yes</button>
+      <button type="button" class="noclass">no</button>
+    </div>
+    <script type="text/javascript">
+      var yes = document.querySelector(".yesclass");
+
+      //First, we make a code for "YES" option
+      function clkfunc() {
+        alert("ummah, Sending lots of Virtual Hugs and Kisses..");
+      }
+
+      //for no option
+      const no = document.querySelector(".noclass");
+      no.addEventListener("click", () => {
+        move();
+      });
+      no.addEventListener("mouseover", () => {
+        move();
+      });
+      function move() {
+        let i = Math.floor(Math.random() * window.innerWidth) + 1;
+        let j = Math.floor(Math.random() * window.innerHeight) + 1;
+        no.style.position = "absolute";
+        no.style.right = i + "px";
+        no.style.top = j + "px";
+      }
+    </script>
+  </body>
+</html>
